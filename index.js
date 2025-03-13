@@ -21,9 +21,9 @@ app.get("/joke", async (req, res) => {
                 setup: result.data.setup,
                 delivery: result.data.delivery,
             });
-        } else if (result.data.joke !== undefined) { // Handle single-line jokes
+        } else if (result.data.joke !== undefined) {
             res.render("index.ejs", {
-                singleJoke: result.data.joke, // Pass joke variable to EJS
+                singleJoke: result.data.joke, 
             });
         } else {
             res.render("index.ejs", {
